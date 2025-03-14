@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{61E06A4C-EED6-45F2-9A72-9C25BEBE1067}|WinApiLab3\\WinApiLab3.vcxproj|C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\WinApiLab3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{61E06A4C-EED6-45F2-9A72-9C25BEBE1067}|WinApiLab3\\WinApiLab3.vcxproj|solutionrelative:WinApiLab3\\WinApiLab3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61E06A4C-EED6-45F2-9A72-9C25BEBE1067}|WinApiLab3\\WinApiLab3.vcxproj|C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\Seminar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{61E06A4C-EED6-45F2-9A72-9C25BEBE1067}|WinApiLab3\\WinApiLab3.vcxproj|solutionrelative:WinApiLab3\\Seminar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +18,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "WinApiLab3.cpp",
               "DocumentMoniker": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\WinApiLab3.cpp",
               "RelativeDocumentMoniker": "WinApiLab3\\WinApiLab3.cpp",
-              "ToolTip": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\WinApiLab3.cpp*",
-              "RelativeToolTip": "WinApiLab3\\WinApiLab3.cpp*",
-              "ViewState": "AQIAAKAAAAAAAAAAAAAAALYAAAAAAAAA",
+              "ToolTip": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\WinApiLab3.cpp",
+              "RelativeToolTip": "WinApiLab3\\WinApiLab3.cpp",
+              "ViewState": "AQIAALEAAAAAAAAAAAAAwMsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-14T06:29:34.664Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "28e6f0d0-28f6-435c-98b0-5a2810da6adc",
+        "Display": 1,
+        "X": 604,
+        "Y": -16,
+        "Width": 1553,
+        "Height": 982,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Seminar.cpp",
+              "DocumentMoniker": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\Seminar.cpp",
+              "RelativeDocumentMoniker": "WinApiLab3\\Seminar.cpp",
+              "ToolTip": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\Seminar.cpp",
+              "RelativeToolTip": "WinApiLab3\\Seminar.cpp",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAEsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T08:00:37.336Z",
+              "EditorCaption": ""
             }
           ]
         }

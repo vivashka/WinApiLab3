@@ -1,7 +1,8 @@
 #include <windows.h>
+#include <iostream>
 
 // Глобальные переменные настроек и состояния
-unsigned short cell_size = 50; // размер клетки в пикселях
+int cell_size = 50; // размер клетки в пикселях
 int grid_width = 10; // количество клеток по горизонтали
 int grid_height = 10; // количество клеток по вертикали
 LPBYTE grid;  // массив состояния клеток: 0 – пусто, 1 – круг, 2 – крест
@@ -34,7 +35,8 @@ void ResizeGrid(int new_width, int new_height) {
 }
 
 // Функция сохранения состояния в бинарный файл "save.dat"
-void SaveState()
+// СТАРАЯ РЕАЛИЗАЦИЯ
+void SaveState() 
 {
     HANDLE hFile = CreateFileW(L"save.dat", GENERIC_WRITE, 0, NULL,
                                CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
@@ -53,6 +55,7 @@ void SaveState()
 
 // Функция загрузки состояния из файла "save.dat"
 // Возвращает TRUE при успешной загрузке
+// СТАРАЯ РЕАЛИЗАЦИЯ
 BOOL LoadState()
 {
     HANDLE hFile = CreateFileW(L"save.dat", GENERIC_READ, 0, NULL,
@@ -102,6 +105,78 @@ BOOL LoadState()
     return TRUE;
 }
 
+void ReadState() {
+    HANDLE hFile = CreateFile(
+        L"save.dat",
+        GENERIC_WRITE | GENERIC_READ,
+        FILE_SHARE_WRITE,
+        NULL,
+        CREATE_ALWAYS,
+        FILE_ATTRIBUTE_NORMAL,
+        NULL
+    );
+
+    if (hFile == INVALID_HANDLE_VALUE) {
+        std::cout << "Error create file:" << GetLastError() << std::endl;
+    }
+    HANDLE hFileMap;
+
+
+    hFileMap = CreateFileMapping(
+        hFile,
+        NULL,
+        PAGE_READWRITE,
+        0,
+        256,
+        NULL
+    );
+    
+
+    if (hFileMap == NULL) {
+        std::cout << "Error create file mapping:" << GetLastError() << std::endl;
+        CloseHandle(hFile);
+    }
+
+    LPVOID hFileView = MapViewOfFile(
+        hFileMap,
+        FILE_MAP_ALL_ACCESS,
+        0,
+        0,
+        3
+    );
+
+    if (hFileView == NULL) {
+        std::cout << "Error create file view:" << GetLastError() << std::endl;
+        CloseHandle(hFile);
+        CloseHandle(hFileMap);
+    }
+
+    const char* message = "This new text test";
+    CopyMemory((LPVOID)hFileView, message, strlen(message) + 1);
+
+    const char data[] = "This test text";
+    DWORD writedBytes = 0;
+
+    BOOL isWrite = WriteFile(
+        hFile,
+        data,
+        strlen(data),
+        &writedBytes,
+        NULL
+    );
+
+    if (!isWrite) {
+        std::cout << "Error write file" << GetLastError() << std::endl;
+        CloseHandle(hFile);
+    }
+
+    std::cout << "Success" << std::endl;
+    UnmapViewOfFile(hFileView);
+    CloseHandle(hFile);
+    CloseHandle(hFileMap);
+
+}
+
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR, int nCmdShow)
 {
     // Парсинг аргументов командной строки
@@ -126,6 +201,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR, int nCmdShow)
         }
     }
     LocalFree(argv);
+
 
     // Если не указан -reset и файл save.dat существует, загружаем состояние
     if (LoadState())
