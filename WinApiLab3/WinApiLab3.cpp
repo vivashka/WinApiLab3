@@ -107,7 +107,7 @@ BOOL LoadState()
 
 void ReadState() {
     HANDLE hFile = CreateFile(
-        L"save.dat",
+        L"test.ini",
         GENERIC_WRITE | GENERIC_READ,
         FILE_SHARE_WRITE,
         NULL,
@@ -119,10 +119,9 @@ void ReadState() {
     if (hFile == INVALID_HANDLE_VALUE) {
         std::cout << "Error create file:" << GetLastError() << std::endl;
     }
-    HANDLE hFileMap;
 
 
-    hFileMap = CreateFileMapping(
+    HANDLE hFileMap = CreateFileMapping(
         hFile,
         NULL,
         PAGE_READWRITE,
@@ -179,6 +178,7 @@ void ReadState() {
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR, int nCmdShow)
 {
+    ReadState();
     // Парсинг аргументов командной строки
     int argc = 0;
     LPWSTR* argv = CommandLineToArgvW(GetCommandLineW(), &argc);
