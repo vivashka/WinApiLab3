@@ -26,49 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WinApiLab3.cpp",
-              "DocumentMoniker": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\WinApiLab3.cpp",
-              "RelativeDocumentMoniker": "WinApiLab3\\WinApiLab3.cpp",
-              "ToolTip": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\WinApiLab3.cpp",
-              "RelativeToolTip": "WinApiLab3\\WinApiLab3.cpp",
-              "ViewState": "AQIAACIAAAAAAAAAAAAAwG0AAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-14T06:29:34.664Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "28e6f0d0-28f6-435c-98b0-5a2810da6adc",
-        "Display": 1,
-        "X": 604,
-        "Y": -16,
-        "Width": 1553,
-        "Height": 982,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Seminar.cpp",
               "DocumentMoniker": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\Seminar.cpp",
               "RelativeDocumentMoniker": "WinApiLab3\\Seminar.cpp",
               "ToolTip": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\Seminar.cpp",
               "RelativeToolTip": "WinApiLab3\\Seminar.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAD4AAAAGAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-14T08:00:37.336Z",
+              "WhenOpened": "2025-03-17T06:23:23.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WinApiLab3.cpp",
+              "DocumentMoniker": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\WinApiLab3.cpp",
+              "RelativeDocumentMoniker": "WinApiLab3\\WinApiLab3.cpp",
+              "ToolTip": "C:\\Users\\nikch\\RiderProjects\\WinApiLab3\\WinApiLab3\\WinApiLab3.cpp",
+              "RelativeToolTip": "WinApiLab3\\WinApiLab3.cpp",
+              "ViewState": "AQIAAKwBAAAAAAAAAAAIwNABAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T06:29:34.664Z",
               "EditorCaption": ""
             }
           ]
